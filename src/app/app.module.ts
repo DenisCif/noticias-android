@@ -13,10 +13,12 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { LoginComponent } from './component/auth/login/login.component';
 import { InicioComponent } from './component/inicio/inicio/inicio.component';
+import { RegisterComponent } from './component/auth/register/register.component';
+
 
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, InicioComponent],
+  declarations: [AppComponent, LoginComponent, InicioComponent, RegisterComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

@@ -3,6 +3,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './component/auth/login/login.component';
 import { InicioComponent } from './component/inicio/inicio/inicio.component';
 import { loginGuard } from './guard/login.guard';
+import { RegisterComponent } from './component/auth/register/register.component';
 
 const routes: Routes = [
   // {
@@ -20,6 +21,7 @@ const routes: Routes = [
   {
     path: 'signin', component: LoginComponent
   },
+  { path: 'signup', component: RegisterComponent },
 ];
 
 @NgModule({

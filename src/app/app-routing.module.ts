@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './component/auth/login/login.component';
 import { InicioComponent } from './component/inicio/inicio/inicio.component';
+import { loginGuard } from './guard/login.guard';
 
 const routes: Routes = [
   // {
@@ -9,13 +10,13 @@ const routes: Routes = [
   //   loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   // },
   {
-    path: '', component: InicioComponent
+    path: '', component: InicioComponent, canActivate: [loginGuard]
   },
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
+  // {
+  //   path: '',
+  //   redirectTo: 'home',
+  //   pathMatch: 'full'
+  // },
   {
     path: 'signin', component: LoginComponent
   },

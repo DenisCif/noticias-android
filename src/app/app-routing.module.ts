@@ -4,6 +4,7 @@ import { LoginComponent } from './component/auth/login/login.component';
 import { InicioComponent } from './component/inicio/inicio/inicio.component';
 import { loginGuard } from './guard/login.guard';
 import { RegisterComponent } from './component/auth/register/register.component';
+import { DetalleNoticiaComponent } from './component/noticias/detalle-noticia/detalle-noticia.component';
 
 const routes: Routes = [
   // {
@@ -22,6 +23,7 @@ const routes: Routes = [
     path: 'signin', component: LoginComponent
   },
   { path: 'signup', component: RegisterComponent },
+  { path: 'detalle', component: DetalleNoticiaComponent },
 ];
 
 @NgModule({
